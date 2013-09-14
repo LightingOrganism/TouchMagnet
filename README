@@ -1,0 +1,29 @@
+TouchMagnet alpha1.00 by Lighting Organism 2013 lightingorganism.com
+A processing application for generating visuals based on osc input and displaying LEDs as pixels.
+
+Dustin Edwards dustin@lightingorganism.com
+Dan Cote dan@lightingorganism.com
+
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    
+
+
+Thank you to Heroic Robotics heroicrobotics.com/
+for the PixelPusher hardware, protocols, and library.
+And thank you to openprocessing.org and contributors.
+
+
+
+
