@@ -4,6 +4,8 @@
 *.jar
 *.war
 *.ear
+*.tgz
 
 # Build dir #
 application.*/
+TouchMagnetLinux32/
