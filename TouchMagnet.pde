@@ -112,7 +112,7 @@ void setup() {
   minim = new Minim(this);
 
   // get a line in from Minim, default bit depth is 16
-  //in = minim.getLineIn(Minim.STEREO, 512);
+  in = minim.getLineIn(Minim.STEREO, 512);
 
   // setup renderers
   noiseParticles = new NoiseParticlesRenderer(in);
@@ -133,7 +133,7 @@ void setup() {
 
   // activate first renderer in list
   select = 0;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   visuals[select].setup();
 
   if (pixEnable == true)
@@ -204,47 +204,47 @@ void setup() {
 
 
 void oscSketch1(float iA) {
-  //in.removeListener(visuals[select]);
+  in.removeListener(visuals[select]);
   select = 0;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   //visuals[select].setup();
   colorMode(HSB, 255);
 }
 void oscSketch2(float iA) {
-  //in.removeListener(visuals[select]);
+  in.removeListener(visuals[select]);
   select = 1;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   visuals[select].setup();
   //add code to prevent double tap
 }
 void oscSketch3(float iA) {
-  //in.removeListener(visuals[select]);
+  in.removeListener(visuals[select]);
   select = 2;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   visuals[select].setup();
 }
 void oscSketch4(float iA) {
-  //in.removeListener(visuals[select]);
+  in.removeListener(visuals[select]);
   select = 3;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   visuals[select].setup();
 }
 void oscSketch5(float iA) {
-  //in.removeListener(visuals[select]);
+  in.removeListener(visuals[select]);
   select = 4;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   visuals[select].setup();
 }
 void oscSketch6(float iA) {
-  //in.removeListener(visuals[select]);
+  in.removeListener(visuals[select]);
   select = 5;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   visuals[select].setup();
 }
 void oscSketch7(float iA) {
-  //in.removeListener(visuals[select]);
+  in.removeListener(visuals[select]);
   select = 6;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   visuals[select].setup();
 }
 void oscSketch8(float iA) {
@@ -453,7 +453,7 @@ if (key == ' '){
   //in.removeListener(visuals[select]);
   select++;
   select %= visuals.length;
-  //in.addListener(visuals[select]);
+  in.addListener(visuals[select]);
   visuals[select].setup();
 }
 else {
@@ -468,7 +468,7 @@ else {
 void stop()
 {
   // always close Minim audio classes when you are done with them
-  //in.close();
+  in.close();
   minim.stop();
   super.stop();
 }

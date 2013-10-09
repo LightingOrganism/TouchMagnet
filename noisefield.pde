@@ -2,7 +2,7 @@
 /* !do not delete the line above, required for linking your tweak if you re-upload */
   /* Tweaked by Lighting Organism */
   
-  int NUM_PARTICLES = 500; 
+  int NUM_PARTICLES = 1000; 
 
 class NoiseFieldRenderer extends AudioRenderer {
 
@@ -10,7 +10,7 @@ class NoiseFieldRenderer extends AudioRenderer {
 
 
   NoiseFieldRenderer(AudioSource source) {
-    //rotations =  (int) source.sampleRate() / source.bufferSize();
+    rotations =  (int) source.sampleRate() / source.bufferSize();
   }
 
 

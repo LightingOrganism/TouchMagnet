@@ -3,7 +3,7 @@ class FitzhughRenderer extends AudioRenderer {
     int rotations;
     
      FitzhughRenderer(AudioSource source) {
-      //rotations =  (int) source.sampleRate() / source.bufferSize();
+      rotations =  (int) source.sampleRate() / source.bufferSize();
     }
   
   

@@ -46,6 +46,8 @@ ToneMap toneMap;
 class stainedglassRenderer extends AudioRenderer {
   
   int rotations;
+  int w=canvasW;
+  int h=canvasH;
 
  stainedglassRenderer(AudioSource source) {
     //rotations =  (int) source.sampleRate() / source.bufferSize();
@@ -97,7 +99,9 @@ class stainedglassRenderer extends AudioRenderer {
     // NamedColors are preset colors, but any TColor can be added
     // see javadocs for list of names:
     // http://toxiclibs.org/docs/colorutils/toxi/color/NamedColor.html
-    grad.addColorAt(0,NamedColor.DARKORANGE);
+    
+    //Flame1
+    /*grad.addColorAt(0,NamedColor.DARKORANGE);
     //grad.addColorAt(64,NamedColor.RED);
     //grad.addColorAt(64,NamedColor.CYAN);
     //grad.addColorAt(64,NamedColor.YELLOW);
@@ -105,6 +109,49 @@ class stainedglassRenderer extends AudioRenderer {
     grad.addColorAt(128,NamedColor.ORANGE);
     grad.addColorAt(192,NamedColor.BLACK);
     grad.addColorAt(255,NamedColor.DARKORANGE);
+    */
+    /*
+    //Flame2
+    //grad.addColorAt(0,NamedColor.RED);
+    grad.addColorAt(0,NamedColor.DARKRED);
+    grad.addColorAt(64,NamedColor.DARKORANGE);
+    grad.addColorAt(128,NamedColor.DARKBLUE);
+    grad.addColorAt(192,NamedColor.BLACK);
+    grad.addColorAt(200,NamedColor.BLACK);
+    grad.addColorAt(255,NamedColor.DARKRED);
+    */
+    /*
+    //red/purple
+    grad.addColorAt(0, NamedColor.RED);
+    grad.addColorAt(64, NamedColor.PURPLE);
+    grad.addColorAt(128, NamedColor.BLACK);
+    grad.addColorAt(192, NamedColor.INDIGO);
+    grad.addColorAt(255, NamedColor.RED);
+    */
+    /*
+    //red/purple
+    grad.addColorAt(0, NamedColor.PURPLE);
+    //grad.addColorAt(64, NamedColor.BLACK);
+    grad.addColorAt(128, NamedColor.GREEN);
+    //grad.addColorAt(192, NamedColor.DARKVIOLET);
+    grad.addColorAt(255, NamedColor.PURPLE);
+    */
+    
+    grad.addColorAt(0, NamedColor.DARKRED);
+    //grad.addColorAt(64, NamedColor.BLACK);
+    grad.addColorAt(120, NamedColor.DARKORANGE);
+     grad.addColorAt(136, NamedColor.ORANGE);
+    //grad.addColorAt(159, NamedColor.WHITE);
+    
+    grad.addColorAt(172, NamedColor.MAROON);
+    //grad.addColorAt(64, NamedColor.BLACK);
+    grad.addColorAt(200, NamedColor.BLACK);
+     //ungrad.addColorAt(206, NamedColor.DARKBLUE);
+    grad.addColorAt(212, NamedColor.BLACK);
+    grad.addColorAt(255, NamedColor.DARKRED);
+    
+    
+    
     // the tone map will map cell states/ages to a gradient color
     toneMap=new ToneMap(0,rule.getStateCount()-1,grad);
     

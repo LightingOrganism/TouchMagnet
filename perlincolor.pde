@@ -15,7 +15,7 @@ float cY = 0;
 int rotations;
 
  PerlinColorRenderer(AudioSource source) {
-    //rotations =  (int) source.sampleRate() / source.bufferSize();
+    rotations =  (int) source.sampleRate() / source.bufferSize();
   } 
  
 void setup()
@@ -54,13 +54,15 @@ synchronized void draw()
      float setBrightModeF = (float)map(vFader3, 0, 255, 0, 1);
      float setContrastModeF = (float)map(vFader4, 0, 255, 0, .6);
      float setSpeedModeF = (float)map(vFader5, 0, 255, .00001, .0008);
+     float setNoiseDetailF = (float)map(vFader6, 0, 255, .001, .1);
      
 
       //float v = noise(ox+x*kNoiseDetail,oy+y*kNoiseDetail,millis()*setSpeedModeF);     
       //float v = noise(ox+x*kNoiseDetail,oy+y*kNoiseDetail,millis()*.0001);     
-      float v = noise(ox+x*kNoiseDetail,oy+y*kNoiseDetail,millis()*setSpeedModeF);
+      float v = noise(ox+x*(kNoiseDetail+setNoiseDetailF),oy+y*(kNoiseDetail+setNoiseDetailF),millis()*setSpeedModeF);
+      set(x,y,color((setcolorModeF+.1)-v,setSatModeF,(v*setContrastModeF+v)*setBrightModeF));
       //set(x,y,color(setcolorModeF-y*.05/height,(4-v)*setSatModeF,(setContrastModeF+v*v)*setBrightModeF));    
-      set(x,y,color((setcolorModeF+.1)-v,setSatModeF,(v*setContrastModeF+v)*setBrightModeF)); 
+      //set(x,y,color((setcolorModeF+.1)-v,setSatModeF,(v*setContrastModeF+v)*setBrightModeF)); 
     }
   }
     colorMode(RGB,255);

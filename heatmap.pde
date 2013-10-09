@@ -22,7 +22,7 @@ A touch heatmap with integration with led pixels.
   boolean toggle = true;
 
   HeatmapRenderer(AudioSource source) {
-    //rotations =  (int) source.sampleRate() / source.bufferSize();
+    rotations =  (int) source.sampleRate() / source.bufferSize();
   }
 
   void setup()

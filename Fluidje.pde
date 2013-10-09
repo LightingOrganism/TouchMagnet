@@ -32,7 +32,7 @@ class FluidRenderer extends AudioRenderer {
   int rotations;
 
   FluidRenderer(AudioSource source) {
-    //rotations =  (int) source.sampleRate() / source.bufferSize();
+    rotations =  (int) source.sampleRate() / source.bufferSize();
   }
 
   void setup () {

@@ -22,7 +22,7 @@ class NoiseParticlesRenderer extends AudioRenderer {
 //  float setcolorMode = 200;
 
   NoiseParticlesRenderer(AudioSource source) {
-    //speed =  (int) source.sampleRate() / source.bufferSize();
+    speed =  (int) source.sampleRate() / source.bufferSize();
   }
 
   void setup() {
@@ -36,8 +36,6 @@ class NoiseParticlesRenderer extends AudioRenderer {
       currFrame[i] = color(0, 0, 0);
       prevFrame[i] = color(0, 0, 0);
       tempFrame[i] = color(0, 0, 0);
-      
-
     }
 
 
@@ -163,7 +161,7 @@ class NoiseParticlesRenderer extends AudioRenderer {
     void draw() {
       if ((x >= 0) && (x < width-1) && (y >= 0) && (y < height-1)) {
         int currC = currFrame[(int)x + ((int)y)*width];
-        currFrame[(int)x + ((int)y)*width] = blendColor(c, currC, ADD);
+        currFrame[(int)x + ((int)y)*width] = blendColor(c, currC, OVERLAY);
       }
     }
   }
